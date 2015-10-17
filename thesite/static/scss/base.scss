@@ -1,0 +1,161 @@
+$navfont: 'PT Sans Caption', sans-serif;
+$titlefont: 'PT Sans', sans-serif;
+$fontcolor: #FF7979;
+$shadow: 3px 0px 2px rgba(210, 184, 184, 0.2);
+
+html {
+  overflow-y: scroll;
+}
+
+
+
+.header {
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+	margin: 10px 0 20px;
+	font-size: 42px;
+	font-family: $titlefont;
+	color: $fontcolor;
+	letter-spacing: 3px;
+	text-shadow: $shadow;
+
+	.menu-toggle, .page-title, .not-shown {
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+
+	.menu-toggle {
+		text-align: left;
+		flex-grow: 1;
+
+    	a {
+	    	font-size: 42px;
+	    	text-decoration: none;
+	    	color: $fontcolor;
+    	}
+
+    	a:hover {
+	    	text-decoration: none;
+	    	color: #187272;
+    	}
+	}
+
+	.page-title {
+		flex-grow: 5;
+		flex-shrink: 5;
+	}
+
+	.not-shown {
+    visibility: hidden;
+    flex-grow: 1;
+	}
+}
+
+#page-content {
+	display: none;
+}
+
+
+#background {
+	background: linear-gradient(rgba(240, 243, 245, 0.65), rgba(175, 224, 224,0.47)), url(/static/img/sky.jpg);
+	background-size: cover;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: -10;
+}
+
+
+
+
+.sidebar-nav li {
+
+	a {
+	color: $fontcolor;
+	text-shadow: $shadow;
+	transition: 0.3s;
+	}
+
+	a:hover {
+		color: #187272;
+	}
+
+	.active {
+		color: #187272;
+	}
+
+}
+
+.prof-pic {
+	width: 520px;
+	border: 10px solid white;
+	border-bottom: 25px solid white;
+	margin: auto;
+	margin-top: 40px;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,.3);
+	box-shadow: 0 2px 4px rgba(0,0,0,.3);
+
+	p {
+		font-family: $titlefont;
+		background: white;
+		line-height: 30px;
+		padding: 10px 0 0 0;
+		margin-bottom: 0;
+		font-size: 16px;
+	}
+}
+
+#gallery-view-toggle {
+	
+	span {
+		font-size: 26px;
+		cursor: pointer;
+		margin: 5px;
+		color: #B7CACA;
+		transition: 0.5s;
+	}
+
+	span:hover {
+		color: #187272;
+	}
+
+	.active {
+		color: #187272;
+	}
+
+}
+
+.photogallerypic {
+	width: 100%;
+	margin: 20px 0;
+	border: solid white;
+}
+
+
+
+
+@media (max-width: 912px) {
+	.gallery-col {
+		float: none;
+	}
+}
+
+@media (max-width: 768px) {
+	#gallery-view-toggle {
+		display: none;
+	}
+
+	#photo-gallery div {
+		width: 100%;
+		transition: 2s;
+	}
+}

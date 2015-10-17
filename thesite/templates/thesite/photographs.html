@@ -1,0 +1,41 @@
+{% extends "thesite/base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+	<div id="gallery-view-toggle" class="row text-center">
+		<span class="glyphicon glyphicon-th-large active" aria-hidden="true" id="make-grid"></span>
+		<span class="glyphicon glyphicon-align-justify" aria-hidden="true" id="make-column"></span>
+	</div>
+
+	<div id="photo-gallery" class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12">
+
+			{% for pic in col1 %}
+
+			<img class="img-responsive photogallerypic" src="/static/img/photos/{{pic}}">
+
+			{% endfor %}
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+
+			{% for pic in col2 %}
+
+			<img class="img-responsive photogallerypic" src="/static/img/photos/{{pic}}">
+
+			{% endfor %}
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+
+			{% for pic in col3 %}
+
+			<img class="img-responsive photogallerypic" src="/static/img/photos/{{pic}}">
+
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
