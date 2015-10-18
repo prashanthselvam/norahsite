@@ -1,5 +1,7 @@
 html { overflow-y: scroll; }
 
+#currentMedia { display: none; }
+
 .header { display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-wrap: nowrap; flex-direction: row; align-items: center; text-align: center; margin: 20px 0; font-size: 42px; font-family: "PT Sans", sans-serif; color: #FF7979; letter-spacing: 3px; text-shadow: 3px 0px 2px rgba(210, 184, 184, 0.2); text-decoration: none; }
 .header .menu-toggle, .header .page-title, .header .not-shown { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 .header .menu-toggle { text-align: left; flex-grow: 1; }
@@ -25,10 +27,12 @@ html { overflow-y: scroll; }
 
 .photogallerypic { width: 100%; margin: 20px 0; border: solid white; }
 
-@media (max-width: 912px) { .gallery-col { float: none; } }
+#photo-blanket { z-index: 100; position: fixed; width: 100%; opacity: 0; height: 100%; display: none; }
+
 @media (max-width: 785px) { #gallery-view-toggle { display: none; }
   #photo-gallery div { width: 100%; transition: 2s; }
-  .header { font-size: 38px; } }
+  .header { font-size: 38px; }
+  #currentMedia { max-width: 785px; } }
 @media (max-width: 520px) { .header { font-size: 32px; } }
 @media (max-width: 420px) { .header { font-size: 26px; } }
 

@@ -7,6 +7,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static "css/prettyPhoto.css" %}">
 		<link rel="stylesheet" href="{% static "css/sidebar.css" %}">
 		<link rel="stylesheet" href="{% static "css/base.css" %}">
 		<link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption:700|PT+Sans|Open+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -14,6 +15,8 @@
 	</head>
 	<body>
 		<div id="background">
+		</div>
+		<div id="currentMedia">
 		</div>
 		<div id="wrapper">
 
@@ -55,14 +58,17 @@
 
 
 			{% endblock %}
-			<div>
-
 		</div>
-	</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="{% static "js/main.js" %}"></script>
+    <script src="{% static "js/main.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "js/jquery.prettyPhoto.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+               $(document).ready(function(){
+                 $("a[rel^='prettyPhoto']").prettyPhoto();
+               });
+             </script>
 
 	</body>
 </html>

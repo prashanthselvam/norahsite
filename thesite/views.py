@@ -12,8 +12,11 @@ def home(request):
 def photographs(request):
 	path="static/img/photos"
 	piclist = os.listdir(path)
-	col1 = piclist[:6]
-	col2 = piclist[6:12]
-	col3 = piclist[12:]
-	# piclist = glob.glob("static\img\photos\*.jpg")
+	namelist = []
+	for pic in piclist:
+		namelist.append(pic[:-4])
+	newlist = zip(piclist,namelist)
+	col1 = newlist[:6]
+	col2 = newlist[6:12]
+	col3 = newlist[12:]
 	return render(request, 'thesite/photographs.html', {'col1':col1, 'col2':col2, 'col3':col3,})
