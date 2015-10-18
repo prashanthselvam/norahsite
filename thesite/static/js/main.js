@@ -1,3 +1,13 @@
+function checkSize(){
+    if ($(window).width() < 1120) {
+        $("#wrapper").addClass("toggled");
+    }
+
+    else {
+        $("#wrapper").removeClass("toggled");
+    }
+};
+
 $(document).ready(function(){
 
     $('#page-content').fadeIn(300);
@@ -8,16 +18,12 @@ $(document).ready(function(){
          $(this).addClass('active');
         }
     });
-    // checkSize();
+    checkSize();
 });
 
-// $(window).resize(checkSize);
+$(window).resize(checkSize);
 
-// function checkSize(){
-//     if ($(".gallery-col").css("float") == "none") {
-//         $(".col-md-4").css("width","100%");
-//         $("#gallery-view-toggle").css("display","none");
-//     }
+
 
 //     else {
 //         $(".col-md-4").css("width","33.3333333%");

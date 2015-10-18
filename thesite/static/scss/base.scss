@@ -18,12 +18,13 @@ html {
     flex-direction: row;
     align-items: center;
     text-align: center;
-	margin: 10px 0 20px;
+	margin: 20px 0;
 	font-size: 42px;
 	font-family: $titlefont;
 	color: $fontcolor;
 	letter-spacing: 3px;
 	text-shadow: $shadow;
+	text-decoration: none;
 
 	.menu-toggle, .page-title, .not-shown {
 		-webkit-flex: 1;
@@ -35,11 +36,10 @@ html {
 		text-align: left;
 		flex-grow: 1;
 
-    	a {
-	    	font-size: 42px;
-	    	text-decoration: none;
-	    	color: $fontcolor;
-    	}
+		a {
+			color: $fontcolor;
+			text-decoration: none;
+		}
 
     	a:hover {
 	    	text-decoration: none;
@@ -105,12 +105,12 @@ html {
 	box-shadow: 0 2px 4px rgba(0,0,0,.3);
 
 	p {
-		font-family: $titlefont;
+		font-family: "Roboto Slab";
 		background: white;
+		font-weight: 500;
 		line-height: 30px;
 		padding: 10px 0 0 0;
 		margin-bottom: 0;
-		font-size: 16px;
 	}
 }
 
@@ -149,7 +149,7 @@ html {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 785px) {
 	#gallery-view-toggle {
 		display: none;
 	}
@@ -157,5 +157,21 @@ html {
 	#photo-gallery div {
 		width: 100%;
 		transition: 2s;
+	}
+
+	.header {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 520px) {
+	.header {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 420px) {
+	.header {
+		font-size: 26px;
 	}
 }
