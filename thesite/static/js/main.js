@@ -30,6 +30,9 @@ $(document).ready(function(){
         }
     });
     checkSize();
+
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+    
 });
 
 $(window).resize(checkSize);
