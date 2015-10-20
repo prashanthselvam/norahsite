@@ -5,7 +5,7 @@ def photographs(path):
 	piclist = os.listdir(path)
 	namelist = []
 	for pic in piclist:
-		namelist.append(os.path.splitext(pic.filename)[0])
+		namelist.append(os.path.splitext(img.filename)[0]
 	col1 = piclist[:6]
 	col2 = piclist[6:12]
 	col3 = piclist[12:]

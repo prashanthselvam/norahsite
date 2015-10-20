@@ -43,6 +43,7 @@ html, body {
 	.menu-toggle {
 		text-align: left;
 		flex-grow: 1;
+		font-family: 'Lucida Sans Unicode';
 
 		a {
 			color: $fontcolor;
@@ -177,6 +178,86 @@ html, body {
 
 
 
+
+/**********CONTACT PAGE**********/
+
+
+#contactform {
+	margin-top: 8vh;
+	font-family: 'Open Sans', sans-serif;
+
+	h4 {
+	    margin-bottom: 15px;
+	    font-size: 20px;
+	}
+
+	.contact_text {
+		margin-top: 40px;
+		line-height: 2em;
+		text-align: center;
+
+		.contact_card {
+			margin-top: 25px;
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.contact_box {
+		margin-top: 40px;
+	}
+
+	.contact {
+		width: 100%;
+		margin: 3px 0;
+		padding: 5px;
+		font-size: 14px;
+		resize: none;
+	}
+
+
+	.form-actions {
+		text-align: right;
+		display: flex;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		justify-content: space-between;
+
+
+		button {
+			background-color: $fontcolor;
+		    border: none;
+		    color: white;
+		    padding: 0.25em 20px;
+		}	
+
+		.error_msg {
+			float: left;
+			text-align: left;
+			color: red;
+			font-size: 14px;
+		}	
+
+		.thanks {
+			float: left;
+			text-align: left;
+			color: green;
+			font-size: 12px;
+			margin-right: 10px;
+		}
+
+	}
+
+
+}
+
+
+
+
+
 @media (max-width: 785px) {
 	#gallery-view-toggle {
 		display: none;
@@ -208,3 +289,6 @@ html, body {
 		font-size: 26px;
 	}
 }
+
+
+

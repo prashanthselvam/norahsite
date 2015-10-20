@@ -15,12 +15,10 @@ function checkSize(){
     else {
         $("#photo-blanket").css("display","none");
     }
-
-    console.log($("#currentMedia").css("max-width"));
 };
 
 $(document).ready(function(){
-
+    $("a[rel^='lightbox']").prettyPhoto();
     $('#page-content').fadeIn(300);
     $('.sidebar-nav a').each(function() {
       linklocation = this.href + '/';
@@ -30,9 +28,7 @@ $(document).ready(function(){
         }
     });
     checkSize();
-
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-    
+   
 });
 
 $(window).resize(checkSize);

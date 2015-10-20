@@ -42,7 +42,7 @@
 
 #page-wrapper {
     width: 100%;
-    position: absolute;
+    position: fixed;
     padding: 30px;
 }
 
@@ -57,14 +57,14 @@
 
 .sidebar-nav {
     width: 200px;
-    margin: auto;
+    margin: 20vh auto;
     padding: 0;
     list-style: none;
-    margin-top: 120px;
+    height: 60vh;
 }
 
 .sidebar-nav li {
-    line-height: 80px;
+    line-height: 12vh;
 }
 
 .sidebar-nav li a {
@@ -131,5 +131,16 @@
     #wrapper.toggled #page-wrapper {
         position: relative;
         margin-right: 0;
+    }
+}
+
+@media(max-height: 480px) {
+    .sidebar-nav {
+        margin: 10vh auto;
+        height: 80vh;
+    }
+
+    .sidebar-nav li {
+    line-height: 16vh;
     }
 }

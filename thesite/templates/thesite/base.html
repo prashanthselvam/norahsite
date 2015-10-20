@@ -1,10 +1,11 @@
 	{% load staticfiles %}
 
 	<!DOCTYPE html>
-	<html lang="en" class="no-js">
+	<html lang="en">
 		<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<meta charset="utf-8">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 			<link rel="stylesheet" href="{% static "css/prettyPhoto.css" %}">
@@ -27,13 +28,13 @@
 	                    <a href="/home">ABOUT</a>
 	                </li>
 	                <li>
-	                    <a href="/photographs">PHOTOGRAPHS</a>
+	                    <a href="/photographs">PHOTOGRAPHY</a>
 	                </li>
 	                <li>
-	                    <a href="#">PROJECTS</a>
+	                    <a href="/projects">PROJECTS</a>
 	                </li>
 	                <li>
-	                    <a href="#">CONTACT</a>
+	                    <a href="/contact">CONTACT</a>
 	                </li>
 	                <li>
 	                    <a href="#">MORE</a>
@@ -64,9 +65,8 @@
 </div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	    <script src="{% static "js/main.js" %}" type="text/javascript" charset="utf-8"></script>
 	    <script src="{% static "js/jquery.prettyPhoto.js" %}" type="text/javascript" charset="utf-8"></script>
+	    <script src="{% static "js/main.js" %}" type="text/javascript" charset="utf-8"></script>
 
 		</body>
 	</html>

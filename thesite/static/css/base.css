@@ -6,7 +6,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 .header { display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-wrap: nowrap; flex-direction: row; align-items: center; text-align: center; margin: 20px 0; font-size: 42px; font-family: "PT Sans", sans-serif; color: #FF7979; letter-spacing: 3px; text-shadow: 3px 0px 2px rgba(210, 184, 184, 0.2); text-decoration: none; }
 .header .menu-toggle, .header .page-title, .header .not-shown { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
-.header .menu-toggle { text-align: left; flex-grow: 1; }
+.header .menu-toggle { text-align: left; flex-grow: 1; font-family: 'Lucida Sans Unicode'; }
 .header .menu-toggle a { color: #FF7979; text-decoration: none; }
 .header .menu-toggle a:hover { text-decoration: none; color: #187272; }
 .header .page-title { flex-grow: 5; flex-shrink: 5; }
@@ -35,6 +35,19 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .brighten img:hover { -webkit-filter: grayscale(80%); }
 
 #photo-blanket { z-index: 100; position: fixed; width: 100%; opacity: 0; height: 100%; display: none; }
+
+/**********CONTACT PAGE**********/
+#contactform { margin-top: 8vh; font-family: 'Open Sans', sans-serif; }
+#contactform h4 { margin-bottom: 15px; font-size: 20px; }
+#contactform .contact_text { margin-top: 40px; line-height: 2em; text-align: center; }
+#contactform .contact_text .contact_card { margin-top: 25px; }
+#contactform .contact_text .contact_card a { text-decoration: none; }
+#contactform .contact_box { margin-top: 40px; }
+#contactform .contact { width: 100%; margin: 3px 0; padding: 5px; font-size: 14px; resize: none; }
+#contactform .form-actions { text-align: right; display: flex; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: space-between; }
+#contactform .form-actions button { background-color: #FF7979; border: none; color: white; padding: 0.25em 20px; }
+#contactform .form-actions .error_msg { float: left; text-align: left; color: red; font-size: 14px; }
+#contactform .form-actions .thanks { float: left; text-align: left; color: green; font-size: 12px; margin-right: 10px; }
 
 @media (max-width: 785px) { #gallery-view-toggle { display: none; }
   #photo-gallery div { width: 100%; transition: 2s; }
